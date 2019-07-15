@@ -1,0 +1,19 @@
+# [START gae_flex_quickstart_yaml]
+runtime: java
+env: flex
+service: {insert your service}
+runtime_config:
+   jdk: openjdk8
+
+health_check:
+  enable_health_check: true
+  check_interval_sec: 50
+  timeout_sec: 30
+  unhealthy_threshold: 10
+  healthy_threshold: 5
+  restart_threshold: 60
+
+handlers:
+- url: /.*
+  script: this field is required, but ignored
+# [END gae_flex_quickstart_yaml]
